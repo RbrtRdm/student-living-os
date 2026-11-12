@@ -118,3 +118,96 @@ body{background:var(--bg);color:var(--text)}
  .resident-shell .mobile-nav{left:12px;right:12px}
  .resident-shell .app-foot{margin-bottom:4px}
 }
+
+/* Resident portal composition follows the supplied editorial, mobile-first references. */
+.resident-shell.app-shell{display:block;min-height:100vh;padding-bottom:24px}
+.resident-shell .sidebar{display:none}
+.resident-shell .main-area{min-width:0}
+.resident-shell .topbar{height:66px;padding:0 max(24px,calc((100vw - 1030px)/2));background:var(--pine);border-bottom-color:#234138}
+.resident-shell .top-left{font-size:11px;color:#d5e0d8}
+.resident-shell .top-actions{gap:10px}
+.resident-shell .content{max-width:1030px;padding:42px 28px 34px}
+.resident-shell .resident-editorial{padding:16px 0 20px}
+.resident-editorial>.eyebrow,.resident-room-pass .eyebrow,.resident-event .eyebrow{font-family:monospace;font-size:10px;letter-spacing:1.7px;color:#a7bab0}
+.resident-editorial>.eyebrow span,.resident-room-pass .eyebrow i,.resident-event .eyebrow i{color:var(--mint);font-style:normal}
+.resident-editorial h2{margin:22px 0 10px;font-size:clamp(48px,7vw,76px);line-height:.98;letter-spacing:-4.6px;font-weight:760}
+.resident-editorial h2 em{color:var(--spark);font-style:normal}
+.resident-editorial>p{margin:15px 0;color:#ccd9d1;font-size:clamp(16px,2vw,21px);line-height:1.45}
+.resident-editorial>p b{color:var(--mint);font-weight:700}
+.resident-presence{display:flex;align-items:center;gap:8px;margin-top:23px;color:#a4b6ac;font:10px monospace;letter-spacing:1.2px}
+.presence-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px #8dfdba22}
+.resident-room-pass{position:relative;display:flex;width:100%;align-items:center;justify-content:space-between;gap:18px;overflow:hidden;padding:20px 24px;border:1px solid #416153;border-radius:20px;background:linear-gradient(108deg,#173c32,#234b3c 65%,#2a4e45);text-align:left;transition:transform .2s ease,border-color .2s ease}
+.resident-room-pass:hover{transform:translateY(-2px);border-color:var(--mint)}
+.room-pass-info{min-width:0;flex:1}
+.room-pass-number{margin:4px 0 0;color:#f5f7f2;font-size:clamp(70px,11vw,112px);font-weight:800;line-height:.94;letter-spacing:-7px}
+.room-pass-meta{display:flex;gap:22px;margin-top:12px;padding-top:10px;border-top:1px solid #ffffff24;color:#c0d0c6;font:10px monospace;letter-spacing:1px}
+.room-pass-qr{position:relative;display:grid;place-items:center;width:108px;height:108px;flex:none;padding:8px;border-radius:12px;background:#eff4ec}
+.room-pass-qr .qr-pattern{gap:1px}
+.room-pass-qr .qr-pattern i.filled{background:#173a30}
+.room-pass-qr .qr-pattern:before,.room-pass-qr .qr-pattern:after{width:27px;height:27px;top:11px;left:11px;border-color:#173a30;box-shadow:0 0 0 3px #eff4ec inset}
+.room-pass-qr .qr-pattern:after{left:auto;right:11px}
+.room-pass-qr>span{position:absolute;padding:4px 6px;background:#eff4ec;color:#244a3c;font:800 8px monospace;letter-spacing:1px}
+.room-pass-arrow{flex:none;color:var(--mint)}
+.resident-today-line{display:flex;align-items:center;gap:16px;padding:15px 2px 8px;color:#bdcbc2;font:10px monospace;letter-spacing:.3px}
+.resident-today-line b{color:var(--spark);font-size:14px}
+.resident-today-line>i{width:3px;height:3px;border-radius:50%;background:#779287}
+.resident-shell .section-row{margin:25px 0 12px}
+.resident-shell .section-row h2,.resident-section-heading h2{margin:5px 0 0;font-size:19px;letter-spacing:-.4px}
+.resident-actions{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.resident-actions>button{min-height:190px;padding:18px;border-radius:19px}
+.resident-actions>button>b{font-size:clamp(18px,2.1vw,25px)}
+.resident-actions>button>small{font-size:10px}
+.resident-actions .action-spark{background:var(--spark);border-color:var(--spark);color:#10251e}
+.resident-actions .action-paper{background:#edf0eb;border-color:#edf0eb;color:#132822}
+.resident-actions .action-dark{background:#142d27}
+.resident-actions .action-leaf{background:#2A4E45;border-color:#527467}
+.resident-section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 11px}
+.resident-event{width:100%;min-height:150px;text-align:left;cursor:pointer}
+.resident-event h3{font-size:clamp(22px,3vw,30px)}
+.resident-event .community-art{width:94px;height:94px;color:var(--spark);background:#45634f}
+.resident-lower{margin-top:0}
+.resident-shell .ticket-panel,.resident-shell .panel{border-radius:16px}
+.resident-shell .issue-panel{margin-top:14px}
+.resident-shell .mobile-nav{display:none}
+.resident-notice{width:100%;display:flex;align-items:center;gap:11px;margin:0 0 12px;padding:12px 14px;border:1px solid #527351;border-radius:13px;background:#203d31;color:var(--text);text-align:left}
+.resident-notice>span{display:grid;gap:3px;flex:1}
+.resident-notice b{font:10px monospace;letter-spacing:1px;color:var(--spark)}
+.resident-notice small{font-size:11px;color:#e2e9e2}
+@media(max-width:700px){
+ .resident-shell.app-shell{padding-bottom:92px}
+ .resident-shell .topbar{height:57px;padding:0 13px}
+ .resident-shell .top-left{max-width:100px;overflow:hidden;white-space:nowrap;font-size:9px}
+ .resident-shell .top-left .breadcrumb{display:none}
+ .resident-shell .top-actions{gap:6px}
+ .resident-shell .profile-switch{max-width:35px;font-size:0;padding:7px}
+ .resident-shell .live-indicator,.resident-shell .top-avatar{display:none}
+ .resident-shell .reset-btn{font-size:0;padding:7px}
+ .resident-shell .content{padding:21px 17px 26px}
+ .resident-shell .resident-editorial{padding:10px 0 16px}
+ .resident-editorial>.eyebrow,.resident-room-pass .eyebrow,.resident-event .eyebrow{font-size:9px;letter-spacing:1.35px}
+ .resident-editorial h2{margin:20px 0 11px;font-size:clamp(50px,13vw,68px);letter-spacing:-3.4px}
+ .resident-editorial>p{max-width:320px;font-size:17px}
+ .resident-presence{flex-wrap:wrap;gap:7px;margin-top:20px;font-size:8px;letter-spacing:.8px}
+ .resident-room-pass{gap:10px;padding:16px;border-radius:18px}
+ .room-pass-number{font-size:76px;letter-spacing:-5px}
+ .room-pass-meta{flex-direction:column;gap:5px;font-size:8px}
+ .room-pass-qr{width:70px;height:70px;padding:5px;border-radius:8px}
+ .room-pass-qr .qr-pattern:before,.room-pass-qr .qr-pattern:after{width:20px;height:20px;top:7px;left:7px;border-width:4px;box-shadow:0 0 0 2px #eff4ec inset}
+ .room-pass-qr .qr-pattern:after{left:auto;right:7px}
+ .room-pass-qr>span{font-size:6px}
+ .room-pass-arrow{width:15px}
+ .resident-today-line{justify-content:space-between;gap:7px;padding-top:13px;font-size:8px;letter-spacing:0}
+ .resident-today-line b{font-size:12px}
+ .resident-shell .section-row{margin:22px 0 10px}
+ .resident-shell .section-row h2,.resident-section-heading h2{font-size:18px}
+ .resident-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .resident-actions>button{min-height:163px;padding:14px;border-radius:17px}
+ .resident-actions .quick-index{top:13px;left:14px;right:13px;font-size:9px}
+ .resident-actions>button>b{font-size:22px}
+ .resident-actions>button>small{font-size:9px}
+ .resident-section-heading{margin:26px 0 10px}
+ .resident-event{min-height:145px;padding:17px;border-radius:17px}
+ .resident-event .community-art{width:58px;height:58px;font-size:29px}
+ .resident-lower{grid-template-columns:1fr}
+ .resident-shell .mobile-nav{display:flex;left:12px;right:12px;bottom:calc(9px + env(safe-area-inset-bottom));height:64px;padding:5px 6px;border-radius:999px;background:#172e29}
+}
