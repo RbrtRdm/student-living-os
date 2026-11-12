@@ -15,6 +15,7 @@ export default function Page(){
  useEffect(()=>{const saved=localStorage.getItem('student-living-os-theme');if(saved==='light'||saved==='dark')setTheme(saved);},[]);
  useEffect(()=>{document.documentElement.dataset.theme=theme;localStorage.setItem('student-living-os-theme',theme);},[theme]);
  useEffect(()=>{if(ready)localStorage.setItem('student-living-os-demo',JSON.stringify(state));},[state,ready]);
+ useEffect(()=>{if(role)window.scrollTo(0,0);},[role,view]);
  const openTickets=useMemo(()=>state.tickets.filter(t=>t.status!=='Resuelto'),[state.tickets]);
  function toast(s:string){setNotice(s);window.setTimeout(()=>setNotice(''),2800)}
  function toggleTheme(){setTheme(t=>t==='dark'?'light':'dark')}

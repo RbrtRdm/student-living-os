@@ -211,3 +211,4 @@ body{background:var(--bg);color:var(--text)}
  .resident-lower{grid-template-columns:1fr}
  .resident-shell .mobile-nav{display:flex;left:12px;right:12px;bottom:calc(9px + env(safe-area-inset-bottom));height:64px;padding:5px 6px;border-radius:999px;background:#172e29}
 }
+.resident-shell .topbar{position:sticky;top:0;z-index:20}
